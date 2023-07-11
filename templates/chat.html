@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Chat with GPT</title>
+</head>
+<body>
+    <h1>Chat with GPT</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input type="text" name="message" placeholder="Enter your message">
+        <input type="submit" value="Send">
+    </form>
+    {% if response %}
+        <p><strong>AI:</strong> {{ response }}</p>
+    {% endif %}
+</body>
+</html>
